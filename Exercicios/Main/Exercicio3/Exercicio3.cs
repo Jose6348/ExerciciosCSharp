@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SeuProjeto.Exercicios.Main.Exercicio3
+﻿namespace SeuProjeto.Exercicios.Main.Exercicio3
 {
     public class Exercicio3
     {
@@ -42,6 +36,15 @@ namespace SeuProjeto.Exercicios.Main.Exercicio3
                     Console.WriteLine($"A média é {media}. O aluno está reprovado.");
                 }
                
+            }
+
+            catch (FormatException)
+            {
+                Console.WriteLine("Entrada inválida. Por favor, digite números válidos para as notas.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ocorreu um erro: {ex.Message}");
             }
 
         }

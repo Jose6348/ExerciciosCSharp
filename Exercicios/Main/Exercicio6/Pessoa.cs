@@ -1,4 +1,4 @@
-﻿namespace Exercicios.Exercicio6
+﻿namespace Exercicios.Main.Exercicio6
 {
     public class Pessoa
     {

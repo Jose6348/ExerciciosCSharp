@@ -1,4 +1,4 @@
-﻿namespace Exercicios.Exercicio7
+﻿namespace Exercicios.Main.Exercicio7
 {
     public class Conta
     {

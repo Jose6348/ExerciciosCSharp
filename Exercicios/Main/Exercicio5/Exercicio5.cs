@@ -1,4 +1,4 @@
-﻿namespace Exercicios.Exercicio5
+﻿namespace Exercicios.Main.Exercicio5
 {
     public class Exercicio5
     {

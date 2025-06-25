@@ -1,15 +1,18 @@
-﻿// Remova o "See https://aka.ms/new-console-template for more information" se não precisar.
+﻿// Remova o "See https://aka.ms/new-console-template for mais informações" se não precisar.
 
 using Exercicios.Main.Exercicio4;
 using Exercicios.Main.Exercicio5;
 using Exercicios.Main.Exercicio6;
 using Exercicios.Main.Exercicio7;
-// Adicione a referência para o Exercício 8
 using Exercicios.Main.Exercicio8;
+using Exercicios.Main.Exercício9;
+using Exercicios.Main.Exerciico10;
+using Exercicios.Main.Exercicio11;
+using Exercicios.Main.Exercicio12;
 using SeuProjeto.Exercicios.Main.Exercicio1;
 using SeuProjeto.Exercicios.Main.Exercicio2;
 using SeuProjeto.Exercicios.Main.Exercicio3;
-using System.Runtime.CompilerServices;
+
 
 Console.WriteLine("Escolha o exercício para executar:");
 Console.WriteLine("1 - Exercício 1");
@@ -19,7 +22,11 @@ Console.WriteLine("4 - Exercício 4");
 Console.WriteLine("5 - Exercício 5");
 Console.WriteLine("6 - Exercício 6");
 Console.WriteLine("7 - Exercício 7");
-Console.WriteLine("8 - Sistema de Tarefas (Exercício 8)"); // Opção adicionada
+Console.WriteLine("8 - Sistema de Tarefas (Exercício 8)"); 
+Console.WriteLine("9 - Tratativa de Palavras (Exercício 9)"); 
+Console.WriteLine("10 - Sistema de Chamados (Exercício 10)");
+Console.WriteLine("11 - Exercício 11 (Tratamento de Exceções)");
+Console.WriteLine("12 - Exercício 12 (Listagem de Produtos)");
 Console.Write("Opção: ");
 string opcao = Console.ReadLine();
 
@@ -45,30 +52,39 @@ switch (opcao)
         break;
 
     case "7":
-        var client = new Cliente("Maria");
-        var conta = new Conta(123, client);
-        var banco = new Banco("SantoAndre");
-
-        banco.AdicionarConta(conta);
-
-        conta.Depositar(500);
-        Console.WriteLine($"Saldo após depósito: {conta.ConsultarSaldo()}");
-
-        if (conta.Sacar(200))
-            Console.WriteLine("Saque realizado com sucesso.");
-        else
-            Console.WriteLine("Saque não realizado.");
-
-        Console.WriteLine($"Saldo final: {conta.ConsultarSaldo()}");
+        OperacoesBancarias.Executar();
         break;
 
-    // Novo case para o Exercício 8
     case "8":
         ExecutarSistemaDeTarefas();
         break;
 
     default:
         Console.WriteLine("Opção inválida.");
+        break;
+
+    case "9":
+
+        var tratadorDePalavra = new TratativaDePalavra();
+
+    Console.Write("Digite uma palavra: ");
+    string palavra = Console.ReadLine();
+    
+    tratadorDePalavra.ContadorDeLetras(palavra);
+    break;
+
+    case "10":
+        var sistemaChamados = new ExecutarChamado();
+        sistemaChamados.Iniciar();
+        break;
+    case "11":
+        var tratamentoExcecoes = new ExecutarArquivo();
+        tratamentoExcecoes.Iniciar();
+        break;
+
+    case "12":
+        var ListagemDeProdutos = new ExecutarListagem();
+        ListagemDeProdutos.FiltrarEExibirProdutosCaros();
         break;
 }
 
@@ -119,3 +135,4 @@ static void ExecutarSistemaDeTarefas()
 
     } while (opcaoTarefa != "4");
 }
+ 

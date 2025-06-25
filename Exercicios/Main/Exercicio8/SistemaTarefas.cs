@@ -32,9 +32,7 @@ namespace Exercicios.Main.Exercicio8
     {
         private List<Tarefa> tarefas = new List<Tarefa>();
 
-        /// <summary>
-        /// Adiciona uma nova tarefa à lista.
-        /// </summary>
+         
         /// <param name="titulo">O título da tarefa.</param>
         /// <param name="descricao">A descrição da tarefa.</param>
         public void AdicionarTarefa(string titulo, string descricao)
@@ -48,9 +46,7 @@ namespace Exercicios.Main.Exercicio8
             Console.WriteLine("Tarefa adicionada com sucesso!");
         }
 
-        /// <summary>
-        /// Lista todas as tarefas cadastradas.
-        /// </summary>
+        
         public void ListarTarefas()
         {
             if (tarefas.Count == 0)
@@ -66,9 +62,7 @@ namespace Exercicios.Main.Exercicio8
             }
         }
 
-        /// <summary>
-        /// Marca uma tarefa como concluída com base no título.
-        /// </summary>
+   
         /// <param name="titulo">O título da tarefa a ser marcada como concluída.</param>
         public void MarcarComoConcluida(string titulo)
         {
